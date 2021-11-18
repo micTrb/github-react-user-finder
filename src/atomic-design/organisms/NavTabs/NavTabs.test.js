@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import TextInput from "src/atomic-design/atoms/TextInput/TextInput.js";
+import NavTabs from "./NavTabs";
 
-describe("TextInput", () => {
+describe("NavTabs", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<TextInput />);
+    const wrapper = shallow(<NavTabs />);
     expect(wrapper).toMatchSnapshot();
   });
 });

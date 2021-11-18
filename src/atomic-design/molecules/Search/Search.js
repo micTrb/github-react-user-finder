@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import {FormControl, InputAdornment, IconButton, InputLabel, OutlinedInput} from "@mui/material";
-import TextInput from "../../atoms/TextInput/TextInput.js";
+import TextSearchInput from "../../atoms/TextSearchInput/TextSearchInput.js";
 
 
 const Search = () => {
@@ -13,12 +13,19 @@ const Search = () => {
     setInputValue(e.target.value);
   }
 
+  const handleSearch = (e) => {
+    // action set search string+
+    e.preventDefault();
+    console.log(inputValue);
+  }
+
 
   return (
     <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-      <TextInput
+      <TextSearchInput
         value={inputValue}
         onInputChange={handleChangeInput}
+        onClickSearch={handleSearch}
       />
     </FormControl>
   )

@@ -2,12 +2,14 @@ import React, {useState} from "react";
 import {IconButton, InputAdornment, OutlinedInput, TextField} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search.js";
 
-const TextInput = ({ onInputChange, value }) => {
-
-
+const TextSearchInput = ({ onInputChange, onClickSearch, value }) => {
 
   const handleChange = (e) => {
     onInputChange(e)
+  }
+
+  const handleClick = (e) => {
+    onClickSearch(e);
   }
 
 
@@ -20,8 +22,7 @@ const TextInput = ({ onInputChange, value }) => {
       endAdornment={
         <InputAdornment position="end">
           <IconButton
-            aria-label="toggle password visibility"
-            edge="end"
+            onClick={handleClick}
           >
             <SearchIcon/>
           </IconButton>
@@ -31,4 +32,5 @@ const TextInput = ({ onInputChange, value }) => {
   );
 };
 
-export default TextInput;
+
+export default TextSearchInput;

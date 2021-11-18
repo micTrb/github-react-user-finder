@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import { Provider, useSelector } from "react-redux";
-import { store, persistor } from "./store";
+
 import './App.css';
 
 
 import Search from "./atomic-design/molecules/Search/Search";
-import Landing from "./atomic-design/pages/Landing";
-import Users from "./atomic-design/pages/Users";
-import Companies from "./atomic-design/pages/Companies";
+import Landing from "./atomic-design/pages/Landing/Landing";
+import Users from "./atomic-design/pages/Users/Users";
+import Companies from "./atomic-design/pages/Companies/Companies";
+import NavTabs from "./atomic-design/organisms/NavTabs/NavTabs";
 
 function App() {
   return (
@@ -18,9 +18,9 @@ function App() {
           <h1>Github React Users/Companies finder</h1>
           <Search/>
           <Routes>
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/users" component={Users} />
-            <Route exact path="/companies" component={Companies} />
+            <Route index path="/" element={<Landing />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/companies" element={<Companies />} />
           </Routes>
         </div>
       </Router>
