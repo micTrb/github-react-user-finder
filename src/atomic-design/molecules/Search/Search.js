@@ -16,7 +16,6 @@ const Search = () => {
 
   return (
     <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-      <InputLabel htmlFor="outlined-adornment-password">User name</InputLabel>
       <TextInput
         value={inputValue}
         onInputChange={handleChangeInput}

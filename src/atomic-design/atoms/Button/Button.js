@@ -1,14 +1,14 @@
 import React from "react";
 
 
-const Button = ({ children, variant }) => {
+const Button = ({ variant }) => {
 
 
   return (
     <Button
       variant={variant}
     >
-      {children}
+
     </Button>
   )
 };
